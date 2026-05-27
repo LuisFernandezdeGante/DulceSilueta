@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Tentación | Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+
+
+    
+
+   <header class="header shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-3">
+            <img src="../img/logo.png" alt="Logo" class="logo">
+            <div>
+                <h1 class="brand-title">Dulce  Silueta</h1>
+                <p class="brand-subtitle">Lencería para mujer</p>
+            </div>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="carrito.html" class="btn btn-light position-relative">
+                🛒 Carrito
+                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </a>
+            <a href="favoritos.html" class="btn btn-outline-light position-relative">
+                ❤ Favoritos
+                <span id="favorites-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="main-layout">
+
+    <!-- Sidebar -->
+    <nav class="sidebar p-3">
+
+
+        <ul class="nav flex-column mb-5">
+            <li><a href="home.html" class="nav-link">Inicio</a></li>
+            <li><a href="index.html" class="nav-link">Acerca de nosotros</a></li>
+            <li><a href="productos.html" class="nav-link">Productos</a></li>
+            <li><a href="ubicacion.html" class="nav-link">Ubicación</a></li>
+            <li><a href="comentarios.html" class="nav-link">Comentarios</a></li>
+        </ul>
+        <!-- REDES -->
+            <div class="social-section">
+                <h5 class="social-title">
+                    Síguenos
+                </h5>
+                <div class="social-icons">
+                    <!-- FACEBOOK -->
+                    <a href="https://www.facebook.com/share/1Cnaeambm4/"target="_blank" class="social-btn">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/dul_cesilueta?igsh=MWR4MGpkeHB6YTc5Yw==" target="_blank" class="social-btn">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/2204823529" target="_blank" class="social-btn">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+    </nav>
+
+    <!-- Contenido -->
+    <div class="content p-4 w-100">
+
+        <div class="banner-container mb-4">
+            <img src="../img/inicio.png" alt="Productos" class="banner-productos">
+        </div>
+
+       
+
+        <!-- Carrusel -->
+        <div id="carouselExampleIndicators"
+    class="carousel slide mb-5 custom-carousel"
+    data-bs-ride="carousel">
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0" class="active"></button>
+
+                <button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"></button>
+
+                <button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Imágenes -->
+            <div class="carousel-inner rounded shadow">
+
+                <div class="carousel-item active">
+                    <img src="..\img\bannerof1.jpeg" class="d-block w-100 carousel-img" alt="Producto 1">
+
+                    
+                </div>
+
+                <div class="carousel-item">
+                    <img src="..\img\bannerof3.jpeg" class="d-block w-100 carousel-img" alt="Producto 2">
+
+                   
+                </div>
+
+                <div class="carousel-item">
+                    <img src="..\img\bannerof2.jpeg" class="d-block w-100 carousel-img" alt="Producto 3">
+
+                    
+                </div>
+
+            </div>
+
+            <!-- Botones -->
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+        <!-- Productos destacados -->
+        <div class="mb-4">
+            <h2 class="fw-bold">Productos Destacados</h2>
+            <p class="text-muted">
+                Los favoritos de nuestros clientes
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="row g-4">
+
+             <!-- 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/oferta1.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+
+                    <div class="card-body">
+                        <p class="price">SUPER OFERTA</p>
+                        <h5 class="card-title">
+                           Paquete de 3 brasieres
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$135 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36B
+                                </button>
+                               
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Paquete de 3 brasieres',  135,'../img/oferta1.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- 2-->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/oferta3.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <p class="price">SUPER OFERTA</p>
+                        <h5 class="card-title">
+                           Paquete de boxer Caballero
+                        </h5>
+                        <p class="card-text">
+                            Excelente calidad.
+                        </p>
+                        <p class="price">$50 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Paquete de boxer Hombre',  50,'../img/oferta3.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/oferta2.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <p class="price">SUPER OFERTA</p>
+                        <h5 class="card-title">
+                            Paquete de pantaletas
+                        </h5>
+                        <p class="card-text">
+                            Máxima comodidad.
+                        </p>
+                        <p class="price">$95 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                               
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36C
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    38C
+                                </button>
+                                
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Paquete pantaletas',  95,'../img/oferta2.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+           
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="footer mt-auto">
+    <div class="container-fluid">
+
+        <div class="row">
+
+          
+            <div class="col-md-4 mb-3">
+                <h5>Dulce Tentación</h5>
+
+                <p>
+                    Elegancia, comodidad y sensualidad
+                    en cada diseño.
+                </p>
+            </div>
+
+           
+            <div class="col-md-4 mb-3">
+
+                <h5 class="footer-title">
+                    Enlaces
+                </h5>
+
+                <div class="footer-nav">
+
+                    <a href="home.html"
+                        class="footer-btn">
+
+                        Inicio
+
+                    </a>
+
+                    <a href="productos.html"
+                        class="footer-btn">
+
+                        Productos
+
+                    </a>
+
+                    <a href="ubicacion.html"
+                        class="footer-btn">
+
+                        Ubicación
+
+                    </a>
+
+                </div>
+
+                <div class="social-icons col-md-8 mb-4">
+
+                    <!-- FACEBOOK -->
+                    <a href="https://www.facebook.com/share/1Cnaeambm4/"target="_blank" class="social-btn">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/dul_cesilueta?igsh=MWR4MGpkeHB6YTc5Yw==" target="_blank" class="social-btn">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/525512345678" target="_blank" class="social-btn">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 mb-3">
+                <h5>Contacto</h5>
+
+                <p>Email: alejsm60@gmail.com</p>
+                <p>Tel: +52 220 482 3529</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center">
+            © 2026 Dulce Silueta | Todos los derechos reservados
+        </div>
+
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Favoritos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="container py-5">
+
+     <div class="banner-container mb-4">
+            <img src="../img/deseos.png" alt="Productos" class="banner-productos">
+        </div>
+
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <a href="productos.html"
+            class="btn btn-dark">
+
+            Seguir comprando
+
+        </a>
+
+    </div>
+
+    <div id="favorites-items"
+        class="row g-4">
+
+    </div>
+
+</div>
+
+<script>
+
+function loadFavorites() {
+
+    let favorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
+
+    let container =
+        document.getElementById("favorites-items");
+
+    container.innerHTML = "";
+
+    favorites.forEach((product, index) => {
+
+        container.innerHTML += `
+        
+        <div class="col-md-4">
+
+            <div class="card shadow-sm h-100">
+
+                <img src="${product.image}"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h5>${product.name}</h5>
+
+                    <p class="price">
+                        $${product.price} MXN
+                    </p>
+
+                    
+                    <div class="d-grid gap-2">
+
+                        <button class="btn btn-pink"
+                            onclick='moveToCart(
+                                "${product.name}",
+                                ${product.price},
+                                "${product.image}"
+                            )'>
+
+                            🛒 Agregar al carrito
+
+                        </button>
+
+                        <button class="btn btn-danger"
+                            onclick="removeFavorite(${index})">
+
+                            Eliminar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        `;
+    });
+}
+
+function removeFavorite(index) {
+
+    let favorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
+
+    favorites.splice(index, 1);
+
+    localStorage.setItem(
+        "favorites",
+        JSON.stringify(favorites)
+    );
+
+    loadFavorites();
+}
+
+function moveToCart(name, price, image) {
+
+    // OBTENER CARRITO
+    let cart =
+        JSON.parse(localStorage.getItem("cart")) || [];
+
+    // AGREGAR PRODUCTO
+    cart.push({
+        name,
+        price,
+        image,
+        size: "M"
+    });
+
+    // GUARDAR
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    alert("Producto agregado al carrito");
+}
+
+loadFavorites();
+
+</script>
+
+</body>
+</html>

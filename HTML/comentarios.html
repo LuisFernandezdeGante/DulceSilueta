@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Comentarios</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <!-- TÍTULO -->
+    <div class="comments-header mb-5">
+
+        <div class="banner-container mb-4">
+            <img src="../img/comentario.png" alt="Productos" class="banner-productos">
+        </div>
+
+      
+        <p class="text-muted">
+            Comparte tu experiencia con nosotros.
+        </p>
+
+        <a href="productos.html"
+            class="btn btn-dark">
+
+            Seguir comprando
+
+        </a>
+
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="comment-form-card shadow-lg mb-5">
+
+        <div class="row align-items-center">
+
+            <!-- IMAGEN -->
+            <div class="col-md-5 p-4 text-center">
+
+                <img src="../img/cometarios.png"
+                    class="img-fluid form-img">
+
+            </div>
+
+            <!-- FORM -->
+            <div class="col-md-7 p-5">
+
+                <h2 class="fw-bold mb-4">
+                    Déjanos tu comentario
+                </h2>
+
+                <!-- NOMBRE -->
+                <div class="mb-3">
+
+                    <label class="form-label fw-bold">
+                        Nombre
+                    </label>
+
+                    <input type="text"
+                        id="nombre"
+                        class="form-control"
+                        placeholder="Ingresa tu nombre">
+
+                </div>
+
+                <!-- CORREO -->
+                <div class="mb-3">
+
+                    <label class="form-label fw-bold">
+                        Correo electrónico
+                    </label>
+
+                    <input type="email"
+                        id="correo"
+                        class="form-control"
+                        placeholder="correo@ejemplo.com">
+
+                </div>
+
+                <!-- COMENTARIO -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-bold">
+                        Comentario
+                    </label>
+
+                    <textarea
+                        id="comentario"
+                        class="form-control"
+                        rows="5"
+                        placeholder="Escribe tu comentario..."></textarea>
+
+                </div>
+
+                <!-- BOTÓN -->
+                <button class="btn btn-pink w-100"
+                    onclick="saveComment()">
+
+                    Enviar comentario
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COMENTARIOS -->
+    <div class="row g-4"
+        id="comments-container">
+
+    </div>
+
+</div>
+
+<script>
+
+// GUARDAR COMENTARIO
+function saveComment() {
+
+    let nombre =
+        document.getElementById("nombre").value;
+
+    let correo =
+        document.getElementById("correo").value;
+
+    let comentario =
+        document.getElementById("comentario").value;
+
+    // VALIDACIÓN
+    if (!nombre || !correo || !comentario) {
+
+        alert("Completa todos los campos");
+
+        return;
+    }
+
+    // OBTENER COMENTARIOS
+    let comments =
+        JSON.parse(localStorage.getItem("comments")) || [];
+
+    // AGREGAR
+    comments.push({
+        nombre,
+        correo,
+        comentario
+    });
+
+    // GUARDAR
+    localStorage.setItem(
+        "comments",
+        JSON.stringify(comments)
+    );
+
+    // LIMPIAR
+    document.getElementById("nombre").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("comentario").value = "";
+
+    // RECARGAR
+    loadComments();
+
+    alert("Comentario agregado");
+}
+
+// CARGAR COMENTARIOS
+function loadComments() {
+
+    let comments =
+        JSON.parse(localStorage.getItem("comments")) || [];
+
+    let container =
+        document.getElementById("comments-container");
+
+    container.innerHTML = "";
+
+    comments.reverse().forEach(comment => {
+
+        container.innerHTML += `
+        
+        <div class="col-md-6">
+
+            <div class="comment-card shadow-sm">
+
+                <div class="comment-avatar">
+
+                    ${comment.nombre.charAt(0).toUpperCase()}
+
+                </div>
+
+                <h4 class="mt-3">
+                    ${comment.nombre}
+                </h4>
+
+                <p class="comment-email">
+                    ${comment.correo}
+                </p>
+
+                <p class="comment-text">
+                    "${comment.comentario}"
+                </p>
+
+            </div>
+
+        </div>
+        `;
+    });
+}
+
+loadComments();
+
+</script>
+
+
+
+</body>
+</html>

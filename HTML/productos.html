@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+<header class="header shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-3">
+            <img src="../img/logo.png" alt="Logo" class="logo">
+            <div>
+                <h1 class="brand-title">Dulce  Silueta</h1>
+                <p class="brand-subtitle">Lencería para mujer</p>
+            </div>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="carrito.html" class="btn btn-light position-relative">
+                🛒 Carrito
+                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </a>
+            <a href="favoritos.html" class="btn btn-outline-light position-relative">
+                ❤ Favoritos
+                <span id="favorites-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="main-layout">
+
+    <!-- Sidebar -->
+    <nav class="sidebar p-3">
+
+
+        <ul class="nav flex-column mb-5">
+            <li><a href="home.html" class="nav-link">Inicio</a></li>
+            <li><a href="index.html" class="nav-link">Acerca de nosotros</a></li>
+            <li><a href="productos.html" class="nav-link">Productos</a></li>
+            <li><a href="ubicacion.html" class="nav-link">Ubicación</a></li>
+            <li><a href="comentarios.html" class="nav-link">Comentarios</a></li>
+        </ul>
+        <!-- REDES -->
+            <div class="social-section">
+                <h5 class="social-title">
+                    Síguenos
+                </h5>
+                <div class="social-icons">
+                    <!-- FACEBOOK -->
+                    <a href="https://www.facebook.com/share/1Cnaeambm4/"target="_blank" class="social-btn">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/dul_cesilueta?igsh=MWR4MGpkeHB6YTc5Yw==" target="_blank" class="social-btn">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/2204823529" target="_blank" class="social-btn">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+    </nav>
+    <!-- Contenido -->
+    <div class="content p-4">
+        <div class="banner-container mb-4">
+            <img src="../img/banner.png" alt="Productos" class="banner-productos">
+        </div>
+        <!-- Tarjetas -->
+        <div class="row">
+
+            <!-- 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img2.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Brassier Color Rojo
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$50 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36B
+                                </button>
+                               
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Brassier Color Rojo',  50,'../img/img2.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Brassier Color Rojo',50,  '../img/img2.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- 2-->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img1.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                           Brassier Color Azul Marino
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$50 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36b
+                                </button>
+                                
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Brassier Color Azul Marino',  50,'../img/img1.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Brassier Color Azul Marino',50,  '../img/img1.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img7.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Brassier Sin Aro Color Beige
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$50 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:36C,38C
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36C
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36C
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    38C
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    38C
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Brassier Sin Aro Color beige',  50,'../img/img7.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Brassier Sin Aro Color Beige',50,  '../img/img7.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img8.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Brassier Sin Aro Color Azul Rey
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$50 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36C
+                                </button>
+                                
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Brassier Sin Aro Color Azul Rey',  50,'../img/img8.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Brassier Sin Aro Color Azul Rey',50,  '../img/img8.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img9.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Brassier Sin Aro Color Rosa
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$50 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                               
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36C
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    38C
+                                </button>
+                                
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Brassier Sin Aro Color Rosa',  50,'../img/img9.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Brassier Sin Aro Color Rosa',50,  '../img/img9.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img10.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Brassier Sin Aro Color Azul Cielo
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$50 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    36C
+                                </button>
+                                
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Brassier Sin Aro Color Azul Cielo',  50,'../img/img10.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Brassier Sin Aro Color Azul Cielo',50,  '../img/img10.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img11.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Encaje Floral
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$35 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Encaje Floral',  35,'../img/img11.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Encaje Floral',35,  '../img/img11.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img12.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                           Pantaleta De Encaje Color Azul
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$35 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Encaje Color Azul ',  35,'../img/img12.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Encaje Color Azul',35,  '../img/img12.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img21.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Algodón Color Blanco
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Algodón Color Blanco',  25,'../img/img21.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Algodón Color Blanco',25,  '../img/img21.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img22.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Boxer para Mujer
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                   M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Boxer para Mujer',  25,'../img/img22.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Boxer para Mujer',25,  '../img/img22.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img13.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Encaje Color Negro
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$35 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Encaje Color Negro',  35,'../img/img13.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Encaje Color Negro',35,  '../img/img13.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img14.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                           Pantaleta De Encaje Color Rosa
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$35 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Encaje Color Rosa',  35,'../img/img14.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Encaje Color Rosa',35,  '../img/img14.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img15.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Algodón
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Algodón',  25,'../img/img15.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Algodón',25,  '../img/img15.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img17.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Algodón Con Encaje Color Rosa
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Algodón Con Encaje Color Rosa',  25,'../img/img17.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Algodón Con Encaje Color Rosa',25,  '../img/img17.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img18.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Algodón Con Encaje Color Negro
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Algodón Con Encaje Color Negro',  25,'../img/img18.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Algodón Con Encaje Color Negro',25, '../img/img18.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img19.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Algodón Con Encaje Color Melón
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Algodón Con Encaje Color Melón',  25,'../img/img19.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Algodón Con Encaje Color Melón',25,  '../img/img19.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img20.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Pantaleta De Algodón Color Negro
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Pantaleta De Algodón Color Negro',  25,'../img/img20.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Pantaleta De Algodón Color Negro',25,  '../img/img20.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                 <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img3.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Boxer para Hombre 
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    L
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                   XL
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XXL
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XXXL
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Boxer para Hombre',  25,'../img/img3.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Boxer para Hombre',25,  '../img/img3.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img4.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                           Boxer para Hombre
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$25 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    CH
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Boxer para Hombre',  25,'../img/img4.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Boxer para Hombre',25,  '../img/img4.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img5.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Boxer para Hombre
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$30 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XXG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Boxer para Hombre',  30,'../img/img5.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Boxer para hombre',30,  '../img/img5.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen -->
+                    <img src="../img/img6.jpeg" class="card-img-top">
+                    <!-- Contenido -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Boxer para Hombre
+                        </h5>
+                        <p class="card-text">
+                            Encaje fino y máxima comodidad.
+                        </p>
+                        <p class="price">$30 MXN</p>
+                        <!-- Tallas -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Talla:
+                            </label>
+                            <div class="d-flex gap-2 size-container">
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    M
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    G
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XG
+                                </button>
+                                <button class="btn btn-outline-dark btn-size"
+                                    onclick="selectSize(this)">
+                                    XXG
+                                </button>
+                            </div>
+                        </div>
+                                <!-- Botones -->
+                            <button class="btn btn-pink" onclick="addToCart(this,'Boxer para Hombre',  30,'../img/img6.jpeg'  )">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn btn-outline-danger w-10 mb-1"onclick="addToFavorites(    'Boxer para Hombre',30,  '../img/img6.jpeg'  )">
+                                ❤
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+               
+             
+            
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<footer class="footer mt-auto">
+    <div class="container-fluid">
+
+        <div class="row">
+
+          
+            <div class="col-md-4 mb-3">
+                <h5>Dulce Tentación</h5>
+
+                <p>
+                    Elegancia, comodidad y sensualidad
+                    en cada diseño.
+                </p>
+            </div>
+
+           
+            <div class="col-md-4 mb-3">
+
+                <h5 class="footer-title">
+                    Enlaces
+                </h5>
+
+                <div class="footer-nav">
+
+                    <a href="home.html"
+                        class="footer-btn">
+
+                        Inicio
+
+                    </a>
+
+                    <a href="productos.html"
+                        class="footer-btn">
+
+                        Productos
+
+                    </a>
+
+                    <a href="ubicacion.html"
+                        class="footer-btn">
+
+                        Ubicación
+
+                    </a>
+
+                </div>
+
+                <div class="social-icons col-md-8 mb-4">
+
+                    <!-- FACEBOOK -->
+                    <a href="https://www.facebook.com/share/1Cnaeambm4/"target="_blank" class="social-btn">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/dul_cesilueta?igsh=MWR4MGpkeHB6YTc5Yw==" target="_blank" class="social-btn">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/525512345678" target="_blank" class="social-btn">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 mb-3">
+                <h5>Contacto</h5>
+
+                <p>Email: alejsm60@gmail.com</p>
+                <p>Tel: +52 220 482 3529</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center">
+            © 2026 Dulce Silueta | Todos los derechos reservados
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
